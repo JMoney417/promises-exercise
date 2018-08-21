@@ -10,8 +10,8 @@
 
 1. Fork this repo
 1. Clone this repo
-1. Run `yarn install`
-1. Run `yarn test`
+1. Run `npm install`
+1. Run `npm test`
 1. Observe the working syncronous solution tests
 1. Get test to pass with callbacks
 1. Get test to pass with Promises
