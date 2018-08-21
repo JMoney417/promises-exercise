@@ -1,6 +1,12 @@
 const fs = require('fs');
+const path = require('path')
 const { promisify } = require('util');
+
 const readFileAsync = promisify(fs.readFile);
+
+const usersFilePath = path.join(__dirname, '../files/users.json')
+const booksFilePath = path.join(__dirname, '../files/books.json')
+const reviewsFilePath = path.join(__dirname, '../files/reviews.json')
 
 // Note the "async" keyword (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 const joiner = async () => {

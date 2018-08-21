@@ -1,9 +1,14 @@
 const fs = require('fs');
+const path = require('path')
+
+const usersFilePath = path.join(__dirname, '../files/users.json')
+const booksFilePath = path.join(__dirname, '../files/books.json')
+const reviewsFilePath = path.join(__dirname, '../files/reviews.json')
 
 const joiner = () => {
-    const users = JSON.parse(fs.readFileSync('users.json'));
-    const books = JSON.parse(fs.readFileSync('books.json'));
-    const reviews = JSON.parse(fs.readFileSync('reviews.json'));
+    const users = JSON.parse(fs.readFileSync(usersFilePath));
+    const books = JSON.parse(fs.readFileSync(booksFilePath));
+    const reviews = JSON.parse(fs.readFileSync(reviewsFilePath));
     const output = [];
 
     for(let review of reviews) {
