@@ -13,6 +13,15 @@ const joiner = () => {
     // Use https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
     // and return "a promise to join the files"
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+    
+    Promise.all(
+        [readFileAsync(reviewsFilePath), readFileAsync(usersFilePath), readFileAsync(booksFilePath)])
+    .then((data) => {
+        console.log("XXX: " + data)
+
+        
+    })
+
     return Promise.resolve([]);
 }
 
